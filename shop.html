@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101110" />
+    <meta name="description" content="Explore the KAZE collection: everyday menswear, fresh sneakers, and accessories." />
+    <title>Shop the collection — KAZE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="app-page">
+    <div class="announcement"><span>GOOD FITS. GOOD ENERGY.</span><span class="announcement-detail">Free shipping on orders over $75</span><span class="announcement-right">NEW SEASON, NEW YOU <span aria-hidden="true">↗</span></span></div>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="KAZE home">KAZE<span>®</span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="shop.html" aria-current="page">Shop all</a><a href="shop.html?category=Shoes">Shoes</a><a href="shop.html?category=Tops">Tops</a><a href="shop.html?category=Bottoms">Bottoms</a><a href="try-on.html">Virtual try-on</a>
+      </nav>
+      <div class="header-actions"><a class="search-link" href="#catalog" aria-label="Browse collection"><span class="search-icon"></span></a><button class="bag-button" aria-label="Open shopping bag">Bag <span class="bag-count">0</span></button></div>
+    </header>
+    <main>
+      <section class="shop-hero">
+        <div class="shop-hero-glow"></div>
+        <div class="shop-hero-copy">
+          <p class="eyebrow"><span class="eyebrow-mark"></span> THE KAZE ROTATION · VOL. 01</p>
+          <h1>Good things<br />move <span>you.</span></h1>
+          <p>Your new favorites are in here. Find your fit, pick your pace, and make it your own.</p>
+          <a class="button button-lime" href="#catalog">Find your next thing <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="shop-hero-product">
+          <img src="assets/kaze-runner.svg" alt="Original KAZE Runner sneaker illustration" />
+          <div class="shop-hero-orbit"><span>KAZE</span><b>✳</b><span>MOVE DIFFERENT</span></div>
+          <a href="product.html?id=kaze-runner" class="shop-hero-label"><span>THE NEW KAZE RUNNER</span><b>$120 <span aria-hidden="true">↗</span></b></a>
+        </div>
+        <span class="shop-hero-index">01 — FIND YOUR FIT</span>
+      </section>
+
+      <section class="catalog-section section-wrap" id="catalog">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow"><span class="eyebrow-mark"></span> MADE TO MOVE WITH YOU</p><h2>Pick your <span>next.</span></h2></div>
+          <p class="catalog-count"><span id="catalog-count">10</span> GOOD THINGS</p>
+        </div>
+        <div class="shop-toolbar reveal">
+          <div class="filter-list" role="group" aria-label="Filter products">
+            <button class="filter-button active" data-filter="All">All pieces</button>
+            <button class="filter-button" data-filter="Shoes">Shoes</button>
+            <button class="filter-button" data-filter="Tops">Tops</button>
+            <button class="filter-button" data-filter="Bottoms">Bottoms</button>
+            <button class="filter-button" data-filter="Accessories">Accessories</button>
+          </div>
+          <label class="sort-select">SORT BY <select id="sort-products" aria-label="Sort products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      </section>
+      <section class="try-banner">
+        <div class="try-banner-orb" aria-hidden="true">✳</div>
+        <div><p class="eyebrow">YOUR MIRROR, MEET YOUR PHONE</p><h2>See your next<br />pair <span>in motion.</span></h2></div>
+        <a href="try-on.html" class="button button-lime">Open try-on studio <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+    <footer class="site-footer"><a class="wordmark footer-wordmark" href="index.html">KAZE<span>®</span></a><p>Easy does it. © <span id="year"></span> KAZE GOODS.</p><div class="footer-links"><a href="index.html#story">Our story ↗</a><a href="try-on.html">Try-on studio ↗</a></div></footer>
+    <div class="drawer-backdrop" hidden></div>
+    <aside class="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+      <div class="drawer-header"><div><p class="eyebrow">YOUR GOOD STUFF</p><h2>Your bag <span class="drawer-count">(0)</span></h2></div><button class="close-drawer" aria-label="Close shopping bag">×</button></div>
+      <div class="cart-items"></div><div class="cart-empty"><span aria-hidden="true">✳</span><p>Your bag’s taking it easy.</p><a href="shop.html">Find your first fit ↗</a></div>
+      <div class="cart-footer"><div class="subtotal"><span>Subtotal</span><strong>$0.00</strong></div><form class="whatsapp-order-form"><label for="order-name">Your name</label><input id="order-name" name="name" autocomplete="name" placeholder="Full name" required /><label for="order-phone">Your phone number</label><input id="order-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Phone / WhatsApp number" required /><label for="order-address">Delivery address</label><textarea id="order-address" name="address" autocomplete="street-address" placeholder="House, street, city, postal code" rows="2" required></textarea><p>WhatsApp opens with your order ready. Tap Send there to confirm.</p><button class="button button-dark checkout-button" type="submit">Place order on WhatsApp <span aria-hidden="true">↗</span></button></form></div>
+    </aside>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

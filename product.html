@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101110" />
+    <meta name="description" content="Discover the KAZE collection and find your everyday favorite." />
+    <title>Your next favorite — KAZE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="app-page">
+    <div class="announcement"><span>GOOD FITS. GOOD ENERGY.</span><span class="announcement-detail">Free shipping on orders over $75</span><span class="announcement-right">NEW SEASON, NEW YOU <span aria-hidden="true">↗</span></span></div>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="KAZE home">KAZE<span>®</span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="shop.html">Shop all</a><a href="shop.html?category=Shoes">Shoes</a><a href="shop.html?category=Tops">Tops</a><a href="shop.html?category=Bottoms">Bottoms</a><a href="try-on.html">Virtual try-on</a>
+      </nav>
+      <div class="header-actions"><a class="search-link" href="shop.html" aria-label="Browse collection"><span class="search-icon"></span></a><button class="bag-button" aria-label="Open shopping bag">Bag <span class="bag-count">0</span></button></div>
+    </header>
+    <main>
+      <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><a href="shop.html">Shop</a><span>/</span><span id="breadcrumb-product">KAZE Runner</span></div>
+      <section class="product-detail" id="product-detail">
+        <div class="detail-visual">
+          <div class="detail-image-stage">
+            <div class="detail-image-halo"></div>
+            <img id="detail-image" alt="" />
+            <span class="detail-floating-tag">MADE TO MOVE <i>✳</i></span>
+            <span class="detail-image-count">01 <i>/</i> 03</span>
+          </div>
+          <div class="detail-image-thumbs" id="detail-thumbs"></div>
+        </div>
+        <div class="detail-info">
+          <p class="eyebrow"><span class="eyebrow-mark"></span> KAZE GOODS · EVERYDAY ICONS</p>
+          <p class="detail-rating"><span>★★★★★</span> 4.9 <i>·</i> 128 good reviews</p>
+          <h1 id="detail-name">KAZE Runner</h1>
+          <p id="detail-description" class="detail-description"></p>
+          <p id="detail-price" class="detail-price"></p>
+          <div class="detail-color-row"><span>COLOR <b id="detail-color-name">Pop red</b></span><div class="color-swatches"><button class="color-swatch selected" data-color="Pop red" aria-label="Pop red color"></button><button class="color-swatch color-swatch-blue" data-color="Cloud blue" aria-label="Cloud blue color"></button><button class="color-swatch color-swatch-cream" data-color="Soft cream" aria-label="Soft cream color"></button></div></div>
+          <div class="size-heading"><span>SELECT SIZE <b id="size-help">US MENS</b></span><button class="size-guide-link" type="button" data-size-guide>Size guide ↗</button></div>
+          <div class="size-list" role="group" aria-label="Select shoe size">
+            <button type="button" data-size="7">7</button><button type="button" data-size="8">8</button><button type="button" data-size="9">9</button><button type="button" data-size="10">10</button><button type="button" data-size="11">11</button><button type="button" data-size="12">12</button>
+          </div>
+          <p class="size-error" aria-live="polite"></p>
+          <div class="detail-actions"><button class="button button-dark detail-add" type="button">Add to bag <span id="detail-price-button"></span><b aria-hidden="true">↗</b></button><button class="detail-heart favorite-button" type="button" aria-label="Add to favorites" aria-pressed="false">♡</button></div>
+          <a class="try-detail-link" href="try-on.html"><span class="try-icon">◉</span><span><b>Try it in your world</b><small>Step into our virtual try-on studio</small></span><span>↗</span></a>
+          <div class="detail-perks"><p><span>↗</span> Free shipping over $75</p><p><span>↻</span> Easy 30-day returns</p></div>
+          <details class="detail-accordion"><summary>Details & materials <span>+</span></summary><p>Thoughtful everyday design, made with comfortable materials and a little extra room to move. Designed for daily wear.</p></details>
+          <details class="detail-accordion"><summary>Shipping & returns <span>+</span></summary><p>Free shipping on orders over $75. Try them out at home and return unworn items within 30 days.</p></details>
+        </div>
+      </section>
+      <section class="detail-recommend section-wrap"><div class="section-heading"><div><p class="eyebrow">KEEP YOUR ROTATION FRESH</p><h2>More good <span>stuff.</span></h2></div><a class="text-link" href="shop.html">Shop everything <span>↗</span></a></div><div class="product-grid" id="recommend-grid"></div></section>
+    </main>
+    <footer class="site-footer"><a class="wordmark footer-wordmark" href="index.html">KAZE<span>®</span></a><p>Easy does it. © <span id="year"></span> KAZE GOODS.</p><div class="footer-links"><a href="shop.html">Shop ↗</a><a href="try-on.html">Try-on studio ↗</a></div></footer>
+    <div class="drawer-backdrop" hidden></div>
+    <aside class="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+      <div class="drawer-header"><div><p class="eyebrow">YOUR GOOD STUFF</p><h2>Your bag <span class="drawer-count">(0)</span></h2></div><button class="close-drawer" aria-label="Close shopping bag">×</button></div>
+      <div class="cart-items"></div><div class="cart-empty"><span aria-hidden="true">✳</span><p>Your bag’s taking it easy.</p><a href="shop.html">Find your first fit ↗</a></div>
+      <div class="cart-footer"><div class="subtotal"><span>Subtotal</span><strong>$0.00</strong></div><form class="whatsapp-order-form"><label for="order-name">Your name</label><input id="order-name" name="name" autocomplete="name" placeholder="Full name" required /><label for="order-phone">Your phone number</label><input id="order-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Phone / WhatsApp number" required /><label for="order-address">Delivery address</label><textarea id="order-address" name="address" autocomplete="street-address" placeholder="House, street, city, postal code" rows="2" required></textarea><p>WhatsApp opens with your order ready. Tap Send there to confirm.</p><button class="button button-dark checkout-button" type="submit">Place order on WhatsApp <span aria-hidden="true">↗</span></button></form></div>
+    </aside>
+    <dialog class="size-guide-dialog"><div class="size-dialog-head"><p class="eyebrow">FIND YOUR FIT</p><button type="button" class="close-size-guide" aria-label="Close size guide">×</button></div><h2>Size guide</h2><p>Our shoes run true to size. Between sizes? Go up for a little more room.</p><table><thead><tr><th>US</th><th>EU</th><th>CM</th></tr></thead><tbody><tr><td>7</td><td>40</td><td>25</td></tr><tr><td>8</td><td>41</td><td>26</td></tr><tr><td>9</td><td>42</td><td>27</td></tr><tr><td>10</td><td>43</td><td>28</td></tr><tr><td>11</td><td>44</td><td>29</td></tr><tr><td>12</td><td>45</td><td>30</td></tr></tbody></table></dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
